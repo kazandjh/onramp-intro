@@ -10,8 +10,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch html",
-            "file": "${Links-Images}/index.html", // Adjust to your HTML file path
-                "webRoot": "${Links-Images}"
+            "file": "${workspaceFolder}/index.html"
         }
     ]
 }
