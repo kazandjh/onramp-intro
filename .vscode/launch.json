@@ -9,7 +9,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "file": "/workspaces/onramp-intro/.vscode/Links-Images"
+            "file": "/workspaces/onramp-intro/.vscode/Links-Images/index.html"
         }
     ]
 }
