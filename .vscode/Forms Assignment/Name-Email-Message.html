@@ -4,25 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Infromation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Ensures borders join cleanly */
+            margin-top: 20px;
+            border: 2px solid #000; /* Outer border */
+        }
+
+        th, td {
+            border: 1px solid #000; /* Cell borders */
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
 </head>
  <body>
-  <form action="./user_data" method=""get">
+    <form action="./user_data" method=""get">
     <h2>Subscribe to Coaching Basketball</h2>
       <p>
-        <label for="name">Name (required):</label>
-        <input type="text" name="name" id="name" required />
+        <label for="first_name">First_Name (required):</label>
+        <input type="text" name="first_name" id="first_name" placeholder="John" required />
+      </p>
+      <p>
+        <label for="last_name">Last_Name (required):</label>
+        <input type="text" name="last_name" id="last_name" placeholder="Smith" required />
       </p>
       <p>
         <label for="email">Email (required):</label>
         <input type="email" name="email" id="email" required />
       </p>
       <p>
-        <label for="messages">Messages</label>
+        <label for="messages">Messages:</label>
         <input type="text" name="messages" id="messages" />
       </p>
-      <p>
-        <button>Sign Up</button>
-      </p>
+
+        <p><button>Sign Up</button>
+        </p>
+
+     <h2>Sample Data Table</h2>
+
+    <table>
+        <tr>
+            <th>First_Name</th>
+            <th>Last_Name</th>
+            <th>Email</th>
+            <th>Messages</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Smith</td>
+            <td>johnsmith@gmail.com</td>
+    </table>
   </form>
  </body>
 </html>
