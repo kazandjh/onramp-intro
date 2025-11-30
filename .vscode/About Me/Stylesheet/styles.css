@@ -1,7 +1,7 @@
 /* Global Styling */
 
 main {
-    margin-right: 280px; /* slightly wider than contact box */
+    margin-right: 280px;     /* slightly wider than contact box */
     transition: margin 0.3s; /* smooth adjustment on resize */
 }
 body {
@@ -28,10 +28,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    margin-right: 300px;
 }
 h2 {
     display: flex;
@@ -43,29 +44,32 @@ h3 {
     justify-content: center;
 }
 
+
+/* Profile Section Container */
+.profile-section {
+    display: flex;
+    flex-direction: column;      /* stack image and quote vertically on small screens */
+    align-items: center;         /* center horizontally */
+    gap: 15px;                   /* spacing between image and aside */
+    margin-bottom: 40px;
+}
+
 /* Profile Image */
 .profile-pic {
-    display: flex;
-    justify-content: center;
-    margin-right: 30px; /* space between image and text */
-    margin-left: 350px;
     width: 200px;
-    
+    border-radius: 8px;
+    object-fit: cover;
 }
 
-.image-container {
-    display: flex;           /* Arrange children horizontally */
-    align-items: flex-start; /* top align text with image */
-    gap: 20px;               /* Space between image and aside */
-    justify-content: center;
-}
-
-.image-aside {
-    max-width: 250px;        /* Optional: limit width */
+/* Quote Aside */
+.profile-quote {
+    max-width: 300px;            /* optional: prevent very wide text */
     background-color: #f0f0f0;
-    padding: 5px 10px; /* top/bottom , left/right */
+    padding: 10px 15px;
     border-radius: 5px;
+    text-align: center;           /* center text inside aside */
 }
+
 
 
 /* Section Styling */
@@ -126,7 +130,7 @@ ul li {
     bottom: 10px;
     right: 10px;
     width: 260px;
-    max-width: 90%; /* nver exceed 90% of viewport on small screen */
+    max-width: 90%;         /* nver exceed 90% of viewport on small screen */
     background: white;
     padding: 15px;
     z-index: 1000;
