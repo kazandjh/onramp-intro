@@ -1,0 +1,37 @@
+/* Styles Sheet for Forms and Tables Assignment */
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Ensures borders join cleanly */
+            margin-top: 20px;
+            border: 2px solid #000; /* Outer border */
+        }
+
+        th, td {
+            border: 1px solid #000; /* Cell borders */
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    
