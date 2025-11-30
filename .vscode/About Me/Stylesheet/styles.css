@@ -123,8 +123,8 @@ ul li {
 
 .contact-me {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    bottom: 10px;
+    right: 10px;
     width: 260px;
     background: white;
     padding: 15px;
