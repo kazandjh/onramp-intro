@@ -19,37 +19,52 @@ body {
 
 /* Heading Styles */
 h1, h2, h3, h4, h5, h6 {
-    color: #2c3e50;
+    color: Navy;
 }
 
 h1 {
-    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
+}
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
 }
 
 /* Profile Image */
 .profile-pic {
-    display: block;
-    margin-right: 20px; /* space between image and text */
-    width: 200px; 
+    display: flex;
+    justify-content: center;
+    margin-right: 30px; /* space between image and text */
+    margin-left: 350px;
+    width: 200px;
+    
 }
 
 .image-container {
     display: flex;           /* Arrange children horizontally */
-    align-items: flex-start; /* Align top edges */
-    gap: 40px;               /* Space between image and aside */
+    align-items: flex-start; /* top align text with image */
+    gap: 20px;               /* Space between image and aside */
 }
 
 .image-aside {
     max-width: 250px;        /* Optional: limit width */
     background-color: #f0f0f0;
-    padding: 10px;
+    padding: 5px 10px; /* top/bottom , left/right */
     border-radius: 5px;
 }
 
+
 /* Section Styling */
 section {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 section h2 {
@@ -64,12 +79,44 @@ p {
 }
 
 /* Lists */
-ul {
-    padding-left: 20px;
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.workexp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.educert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hobby {
+    list-style-position: inside; /* controls where the bullet appears */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 10px;
 }
 
 ul li {
     margin-bottom: 8px;
+}
+
+/* Contact Me */
+
+.contact-me p {
+    text-align: center;
 }
 
 /* Links */
