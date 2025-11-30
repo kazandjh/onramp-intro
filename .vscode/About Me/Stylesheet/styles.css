@@ -1,8 +1,8 @@
 /* Global Styling */
 
 main {
-    padding-bottom: 120px;
-    margin-left: 50px;
+    margin-right: 280px; /* slightly wider than contact box */
+    transition: margin 0.3s; /* smooth adjustment on resize */
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -126,17 +126,41 @@ ul li {
     bottom: 10px;
     right: 10px;
     width: 260px;
+    max-width: 90%; /* nver exceed 90% of viewport on small screen */
     background: white;
     padding: 15px;
-    border-right: 2px solid #ccc;
-    border-bottom: 2px solid #ccc;
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
     z-index: 1000;
+    box-sizing: border-box;
 }
 
 .contact-me p {
     text-align: left;
     margin: 5px 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 700px) {
+    .contact-me {
+        width: 200px;
+        bottom: 10px;
+        right: 10px;
+    }
+    main {
+        margin-right: 220px; /* match new width + gap */
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-me {
+        width: 150px;
+        bottom: 10px;
+        right: 10px;
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+    main {
+        margin-right: 170px; /* match width + gap */
+    }
 }
 
 /* Links */
