@@ -1,4 +1,9 @@
 /* Global Styling */
+
+main {
+    padding-bottom: 120px;
+    margin-left: 50px;
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -52,6 +57,7 @@ h3 {
     display: flex;           /* Arrange children horizontally */
     align-items: flex-start; /* top align text with image */
     gap: 20px;               /* Space between image and aside */
+    justify-content: center;
 }
 
 .image-aside {
@@ -115,8 +121,22 @@ ul li {
 
 /* Contact Me */
 
+.contact-me {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 260px;
+    background: white;
+    padding: 15px;
+    border-right: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
 .contact-me p {
-    text-align: center;
+    text-align: left;
+    margin: 5px 0;
 }
 
 /* Links */
