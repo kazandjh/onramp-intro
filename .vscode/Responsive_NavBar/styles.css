@@ -198,59 +198,74 @@ background-color: navy;
 }
 
 .navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 12px 20px;
-color: white;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: navy;
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+  }
 
-.nav-logo {
-font-size: 1.4rem;
-font-weight: bold;
-}
+  .nav-logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
 
-.nav-links {
-display: flex;
-gap: 25px;
-list-style: none;
-}
+  /* Links container */
+  .nav-links {
+    display: flex; /* shows links horizontally by defualt */
+    gap: 10px;
+    position: static;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    z-index: 10;
+  }
 
-.nav-links a {
-color: white;
-text-decoration: none;
-font-size: 1rem;
-}
+  .nav-links li {
+    list-style: none;
+  }
 
-.nav-links a {
-text-decoration: underline;
-}
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    display: block;
+  }
 
-/* HAMBURGER MENU BUTTON */
-.nav-toggle {
-display: none;
-background: none;
-border: none;
-color: white;
-font-size: 2rem;
-cursor: pointer;
-flex-direction: column;
-justify-content: center;
-gap: 5px;
-}
+  .nav-links li a:hover {
+    background-color: #555;
+    border-radius: 3px;
+  }
 
-.nav-toggle span {
-display: block;
-width: 25px;
-height: 3px;
-background: white;
-margin: 4px 0;
-border-radius: 2px;
-transition: 0.3s;
-}
+  /* Hamburger button */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 11; /* above dropdown */
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  /* Show menu when active */
+  .nav-links.active {
+    display: flex;
+  }
 
 /* ===============================
-10. MEDIA QUERIES
+    MEDIA QUERIES
 =============================== */
 @media (max-width: 700px) {
 .nav-toggle {
