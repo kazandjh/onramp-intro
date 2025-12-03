@@ -1,54 +1,94 @@
-/* ===============================
+/* =========================================================
     GLOBAL STYLES
-=============================== */
+========================================================= */
+* {
+    box-sizing: border-box;
+}
+
 body {
-font-family: Arial, Helvetica, sans-serif;
-margin: 0;
-padding: 0;
-background-color: #f5f5f5;
-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 main {
-margin-right: 280px;
-transition: margin 0.3s;
+    margin-right: 280px;
+    transition: margin 0.3s;
 }
 
-/* ===============================
+
+/* =========================================================
     CONTAINER
-=============================== */
+========================================================= */
 .container {
-max-width: 900px;
-margin: auto;
-padding: 20px;
-background: #fff;
-box-shadow: 0 0 10px rgba(0,0,0,0.1);
-border-radius: 8px;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
 
-/* ===============================
+
+/* =========================================================
     HEADINGS
-=============================== */
+========================================================= */
 h1, h2, h3, h4, h5, h6 {
-color: Navy;
+    color: navy;
 }
 
 h1 {
     text-align: center;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 20px;
     margin-right: 300px;
 }
 
 h2, h3 {
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
-/* ===============================
+
+/* =========================================================
+    PAGE BACKGROUNDS
+========================================================= */
+
+/* HOME PAGE */
+.home-page {
+    background-image: none;
+    background-size: 75% auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    padding-top: 200px;
+    min-height: 100vh;
+}
+
+/* ABOUT ME */
+.about-page {
+    background-image: url(Images/Basketball_About_Page.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* CONTACT PAGE */
+.contact-page {
+    min-height: 100vh;
+    background-image: url("Images/Cyber-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
     PROFILE SECTION
-=============================== */
+========================================================= */
 .profile-section {
 display: flex;
 flex-direction: column;
@@ -71,50 +111,52 @@ border-radius: 5px;
 text-align: center;
 }
 
-/* ===============================
-    LISTS / CONTENT
-=============================== */
+
+/* =========================================================
+    LISTS & CONTENT
+========================================================= */
 .skills, .workexp, .educert {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hobby {
-list-style-position: inside;
-display: flex;
-justify-content: center;
-gap: 20px;
-padding-left: 10px;
+    list-style-position: inside;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 10px;
 }
 
 ul li {
-margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 
-/* ===============================
-    Gallery Box
-=============================== */
+
+/* =========================================================
+    GALLERY
+========================================================= */
 .gallery-h1 {
-    display: table;               
-    margin: 20px auto;              /* centers horizontally, adds top/bottom spacing */
-    padding: 5px 30px;              /* space inside border */
-    border: 3px solid black;      /* border around text */
-    background-color: lightblue;  /* background color inside border */
-    text-align: left;               /* text left-aligned inside h1 */
+    display: table;
+    margin: 20px auto;
+    padding: 5px 30px;
+    border: 3px solid black;
+    background-color: lightblue;
+    text-align: left;
     font-family: Arial, sans-serif;
 }
 
 .gallery-h2 {
-display: flex;
-justify-content: left;
+    display: flex;
+    justify-content: left;
 }
 
 .gallery {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; /* allows images to go to the next line */
+    flex-wrap: wrap;
 }
 
 figure {
@@ -132,69 +174,66 @@ figcaption {
     font-weight: bold;
 }
 
-/* StyleLinks under Images (i.e without figcaptions) */
-
 figure a {
-    display:block;
+    display: block;
     margin-top: 8px;
-    font-weight:bold;
+    font-weight: bold;
     color: blue;
     text-decoration: none;
 }
 
-/* ===============================
+
+/* =========================================================
     CONTACT BOX
-=============================== */
+========================================================= */
 .contact-me {
-position: fixed;
-top: 10px;
-left: 10px;
-width: 260px;
-max-width: 90%;
-background: white;
-padding: 15px;
-z-index: 1000;
-box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 400px;
+    width: 300px;
+    max-width: 90%;
+    padding: 15px;
+    z-index: 1000;
 }
 
 .contact-me p {
-text-align: left;
-margin: 5px 0;
+    color: white;
+    text-align: center;
+    margin: 5px 0;
 }
 
-/* ===============================
+
+/* =========================================================
     LINKS
-=============================== */
+========================================================= */
 a {
-color: #2980b9;
-text-decoration: none;
-transition: 0.2s;
+    color: #2980b9;
+    text-decoration: underline;
+    transition: 0.2s;
 }
 
-a {
-text-decoration: underline;
-}
 
-a {
-color: red;
-}
-
-/* ===============================
+/* =========================================================
     FOOTER
-=============================== */
+========================================================= */
 footer {
-text-align: center;
-margin-top: 40px;
-padding: 15px;
-color: #777;
-font-size: 0.9rem;
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    color: #777;
+    font-size: 0.9rem;
 }
 
-/* ===============================
+
+/* =========================================================
     NAVBAR
-=============================== */
+========================================================= */
 .site-header {
-background-color: navy;
+    position: fixed;
+    top: 0;
+    left: 0; /* FIXED TYPO */
+    background-color: navy;
+    width: 100%; /* ensures full-width */
+    z-index: 2000;
 }
 
 .navbar {
@@ -205,110 +244,104 @@ background-color: navy;
     padding: 10px 20px;
     color: white;
     position: relative;
-  }
+}
 
-  .nav-logo {
+.nav-logo {
     font-weight: bold;
     font-size: 1.2rem;
-  }
+}
 
-  /* Links container */
-  .nav-links {
-    display: flex; /* shows links horizontally by defualt */
+/* LINKS */
+.nav-links {
+    display: flex;
     gap: 10px;
-    position: static;
     background: none;
+    position: static;
     padding: 0;
     border-radius: 0;
-    z-index: 10;
-  }
+}
 
-  .nav-links li {
+.nav-links li {
     list-style: none;
-  }
+}
 
-  .nav-links li a {
+.nav-links li a {
     text-decoration: none;
     color: white;
     padding: 5px 10px;
-    display: block;
-  }
+}
 
-  .nav-links li a:hover {
+.nav-links li a:hover {
     background-color: #555;
     border-radius: 3px;
-  }
+}
 
-  /* Hamburger button */
-  .nav-toggle {
+/* HAMBURGER */
+.nav-toggle {
     display: none;
     flex-direction: column;
     gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 11; /* above dropdown */
-  }
+    z-index: 11;
+}
 
-  .nav-toggle span {
-    display: block;
+.nav-toggle span {
     width: 25px;
     height: 3px;
     background: white;
     border-radius: 2px;
     transition: 0.3s;
-  }
+}
 
-  /* Show menu when active */
-  .nav-links.active {
+.nav-links.active {
     display: flex;
-  }
+}
 
-/* ===============================
+
+/* =========================================================
     MEDIA QUERIES
-=============================== */
+========================================================= */
 @media (max-width: 700px) {
-.nav-toggle {
-display: flex;
-}
 
-.nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    gap: 15px;
-    margin-top: 10px;
-    background-color: navy;
-}
+    .nav-toggle {
+        display: flex;
+    }
 
-.nav-links.show {
-    display: flex;
-}
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 15px;
+        margin-top: 10px;
+        background-color: navy;
+    }
 
-.contact-me {
-    width: 200px;
-    bottom: 10px;
-    right: 10px;
-}
+    .nav-links.show {
+        display: flex;
+    }
 
-main {
-    margin-right: 220px;
-}
+    .contact-me {
+        display: flex;
+        flex-wrap: wrap;
+        width: 200px;
+    }
 
+    main {
+        margin-right: 220px;
+    }
 }
 
 @media (max-width: 500px) {
-.contact-me {
-width: 150px;
-bottom: 10px;
-right: 10px;
-padding: 10px;
-font-size: 0.85rem;
-}
+    .contact-me {
+        width: 150px;
+        padding: 10px;
+        font-size: 0.85rem;
+    }
 
-main {
-    margin-right: 170px;
-}
-
+    main {
+        margin-right: 170px;
+    }
 }
