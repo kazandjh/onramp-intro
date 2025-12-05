@@ -125,7 +125,7 @@ h2, h3 {
 /* CONTACT PAGE */
 .contact-page {
     min-height: 100vh;
-    background-image: url("Images/Cyber-bg.jpg");
+    background-image: url(Images/Cyber-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -136,11 +136,15 @@ h2, h3 {
 
 /* PROJECT PAGE */
 .project-page {
-    background-image: none;
+    background-image: url(Images/Project_BG.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 80px; 
+}
+
+.project-page a {
+    color: white;
 }
 
 .project-page h1 {
