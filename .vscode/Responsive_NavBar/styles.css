@@ -88,7 +88,7 @@ h2, h3 {
 }
 
 .about-page {
-    background-image: url(Images/Basketball_About_Page.jpg);
+    background-image: url(Images/Blue_Graphic.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -103,22 +103,24 @@ h2, h3 {
     text-align: left;         /* align text left */
 }
 
-.about-page h1 {
-    text-align: center;
-}
 
 .about-page-quote {
-max-width: 1200px;
-min-height: 300px;
-background-color: #256eb3;
-padding: 15px 20px;
-border-radius: 5px;
-text-align: left;
-color: white;
-line-height: 1.6;
+    max-width: 1200px;
+    min-height: 300px;
+    background-color: #256eb3;
+    padding: 15px 20px;
+    text-align: left;    /* keeps paragraph left-aligned */
+    color: white;
+    line-height: 1.6;
 }
 
+.about-page-quote h1 {
+    text-align: center;       /* centers H1 text */
+    margin: 0 auto 20px auto; /* auto left/right margins ensure centering */
+    display: block;           /* ensure it behaves as a block element */
+    width: 100%;              /* takes full width of container */
 }
+
 
 /* CONTACT PAGE */
 .contact-page {
@@ -132,12 +134,23 @@ line-height: 1.6;
     padding-top: 80px;
 }
 
+/* PROJECT PAGE */
 .project-page {
     background-image: none;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 80px; 
+}
+
+.project-page h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.project-page h2 {
+    display: flex;
+    justify-content: left;
 }
 
 
@@ -173,9 +186,7 @@ object-fit: cover;
 
 .profile-quote {
 max-width: 300px;
-background-color: #256eb3;
 padding: 10px 15px;
-border-radius: 5px;
 text-align: center;
 color: white;
 }
@@ -187,17 +198,31 @@ color: white;
 /* =========================================================
     LISTS & CONTENT
 ========================================================= */
-.skills, .workexp, .educert, .hobby {
-    list-style-position: inside;
-    padding: 0;
-    margin: 0 auto;       /* centers the whole list */
-    text-align: center;   /* centers text inside list items */
+
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  text-align: center;
+  align-items: start;
 }
 
-ul li {
-    margin-bottom: 8px;
-    color: white;
-    display: block;        /* ensures text-align works */
+/* Force each h2 + its next ul to behave as one block */
+.list-grid h2 {
+  color: #256eb3;
+  margin-bottom: 10px;
+  min-height: 50px;
+}
+
+.list-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0; /* spacing between sections */
+}
+
+.list-grid ul li {
+  margin-bottom: 8px;
+  color: white;
 }
 
 
@@ -238,6 +263,7 @@ figcaption {
     margin-top: 8px;
     font-size: 0.9rem;
     font-weight: bold;
+    color: black;
 }
 
 figure a {
@@ -247,6 +273,10 @@ figure a {
     color: blue;
     text-decoration: none;
 }
+
+/* ========================================================
+    PROJECTS
+========================================================= */
 
 
 /* =========================================================

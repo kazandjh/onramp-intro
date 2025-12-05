@@ -125,10 +125,6 @@ margin-bottom: 8px;
    PROJECTS
 =============================== */
 
-.project-page {
-
-}
-
 /* ===============================
     Gallery Box
 =============================== */
@@ -236,7 +232,7 @@ font-size: 0.9rem;
 .site-header {
 position:fixed;
 top: 0;
-left 0;
+left: 0;
 background-color: navy;
 }
 
